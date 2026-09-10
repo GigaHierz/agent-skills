@@ -4,7 +4,7 @@ description: Integrate DeFi protocols on Celo. Use when building swaps, lending,
 license: Apache-2.0
 metadata:
   author: celo-org
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Celo DeFi Integration
@@ -65,7 +65,12 @@ This skill covers integrating DeFi protocols on Celo, including Uniswap for swap
 | TickLens | 0x5f115D9113F88e0a0Db1b5033D90D4a9690AcD3D |
 | Multicall2 | 0x633987602DE5C4F337e3DbF265303A1080324204 |
 
-### Contract Addresses - Alfajores Testnet
+### Contract Addresses - Alfajores Testnet (sunset)
+
+> ⚠️ **Alfajores is sunset.** Chain ID `44787`; its RPC no longer responds.
+> These addresses are retained only for reading historical deployments —
+> **do not deploy against them.** Use **Celo Sepolia** (`11142220`).
+
 
 | Contract | Address |
 |----------|---------|
@@ -341,3 +346,18 @@ For Aave integration:
 ## Additional Resources
 
 - [contract-addresses.md](references/contract-addresses.md) - All DeFi contract addresses
+
+---
+
+## Source of truth: Celopedia
+
+These skills are **focused, task-level references**. For anything broader —
+verified contract addresses, ecosystem and protocol data, listing
+requirements, grants, governance, migration guides, or cross-cutting Celo
+questions — **[Celopedia](https://github.com/celo-org/celopedia-skills) is the
+canonical source and is kept current.** Where this skill and Celopedia
+disagree, Celopedia wins.
+
+```bash
+npx skills add celo-org/celopedia-skills
+```

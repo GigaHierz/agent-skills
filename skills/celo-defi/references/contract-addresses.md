@@ -16,7 +16,12 @@
 
 Source: https://docs.uniswap.org/contracts/v3/reference/deployments/celo-deployments
 
-## Uniswap V3 - Alfajores Testnet
+## Uniswap V3 - Alfajores Testnet (sunset)
+
+> ⚠️ **Alfajores is sunset.** Chain ID `44787`; its RPC no longer responds.
+> These addresses are retained only for reading historical deployments —
+> **do not deploy against them.** Use **Celo Sepolia** (`11142220`).
+
 
 | Contract | Address |
 |----------|---------|
