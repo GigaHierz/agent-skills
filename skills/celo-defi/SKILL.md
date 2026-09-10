@@ -65,21 +65,19 @@ This skill covers integrating DeFi protocols on Celo, including Uniswap for swap
 | TickLens | 0x5f115D9113F88e0a0Db1b5033D90D4a9690AcD3D |
 | Multicall2 | 0x633987602DE5C4F337e3DbF265303A1080324204 |
 
-### Contract Addresses - Alfajores Testnet (sunset)
+### Contract Addresses - Testnet
 
-> ⚠️ **Alfajores is sunset.** Chain ID `44787`; its RPC no longer responds.
-> These addresses are retained only for reading historical deployments —
-> **do not deploy against them.** Use **Celo Sepolia** (`11142220`).
+Alfajores (chain ID `44787`) is **sunset** — its RPC no longer responds — and
+its addresses have been removed from this file. Celo Sepolia (`11142220`) is
+the only testnet.
 
+For current Celo contract addresses, mainnet and testnet, see
+**[Celopedia](https://github.com/celo-org/celopedia-skills)** → `contracts.md`,
+which is kept in sync with upstream docs by a weekly drift check.
 
-| Contract | Address |
-|----------|---------|
-| Factory | 0x229Fd76DA9062C1a10eb4193768E192bdEA99572 |
-| SwapRouter02 | 0x8C456F41A3883bA0ba99f810F7A2Da54D9Ea3EF0 |
-| QuoterV2 | 0x3c1FCF8D6f3A579E98F4AE75EB0adA6de70f5673 |
-| NonfungiblePositionManager | 0x0eC9d3C06Bc0A472A80085244d897bb604548824 |
-| UniversalRouter | 0x84904B9E85F76a421223565be7b596d7d9A8b8Ce |
-| Permit2 | 0x000000000022D473030F116dDEE9F6B43aC78BA3 |
+```bash
+npx skills add celo-org/celopedia-skills
+```
 
 ### Simple Swap Example
 

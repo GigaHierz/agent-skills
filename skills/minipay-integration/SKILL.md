@@ -225,8 +225,21 @@ rebuild.
   natively. Do not add tokens MiniPay does not natively support.
 - **Never expose the wallet address.** No display, no copy-to-clipboard, no
   share sheet, no address QR — and a truncated `0x123…abc` is **not** an
-  exception. Keep the address in state for `balanceOf` and as the transaction
-  `account`; never render it. Identify users by phone number or an app alias.
+  exception; it is still the address. Keep it in state for `balanceOf` and as
+  the transaction `account`, but never render it.
+
+  **Show a username instead**, in this order:
+  1. A username the user set — prompt for one at onboarding if your app has
+     any social surface.
+  2. A generated display name if they haven't — adjective + noun from a word
+     list, hashed deterministically from the address so it stays stable across
+     sessions without any storage. Users read "clever mango" as a name; they
+     read `0x7a3f…` as an error.
+  3. `"Unknown"`, or nothing at all.
+
+  **Nothing on screen beats a hex string.** The phone number via ODIS also
+  works where you genuinely need to identify a real person. A working
+  `displayName()` helper is in Celopedia → `minipay-templates.md` §8.
 - **No withdrawals to arbitrary addresses.** No free-text or paste-an-address
   field. Pay out only to a destination the app controls or that MiniPay
   resolves.
